@@ -1,7 +1,7 @@
 import fs from 'fs'
 import readline from 'readline'
 
-const path = "matches.csv"
+const path = "C:/Users/Rishab/Desktop/learning webdevelopment/assesment/Assessment_4/src/data/matches.csv";
 
 export const matches_summary = () => {
     return new Promise((resolve, reject) => {
@@ -18,7 +18,24 @@ export const matches_summary = () => {
         });
 
         readInterface.on("close", () => {
-            resolve(output);
+            const [headers, ...data] = output;
+
+            // const 
+            const formattedData = data.map(match => {
+                return headers.reduce((acc, current, index) => {
+                    acc[current] = match[index];
+
+                    return acc
+                }, {})
+            });
+
+            // console.log(formattedData)
+
+            resolve(formattedData)
+
+            console.log(formattedData[0])
+
+
         });
 
         readInterface.on("error", (err) => {
@@ -26,5 +43,7 @@ export const matches_summary = () => {
         });
     });
 }
+
+matches_summary()
 
 
