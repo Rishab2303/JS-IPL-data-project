@@ -13,7 +13,7 @@ const matchesPlayedInYear = (summary, year) => {
     return matches
 }
 
-const extra_runs = async () => {
+export const extra_runs = async () => {
     const summary = await matches_summary()
     const deliveries_ = await deliveries_summary()
 
@@ -39,5 +39,5 @@ const extra_runs = async () => {
     }, {})
 }
 extra_runs().then(data => {
-    console.log(data)
+    return data
 })

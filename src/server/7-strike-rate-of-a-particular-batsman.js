@@ -1,7 +1,7 @@
 import { matches_summary } from "./matches.js";
 import { deliveries_summary } from "./deliveries.js";
 
-const strike_rate_per_season = async (player_name) => {
+export const strike_rate_per_season = async (player_name) => {
     const deliveries = await deliveries_summary()
     const summary = await matches_summary()
 

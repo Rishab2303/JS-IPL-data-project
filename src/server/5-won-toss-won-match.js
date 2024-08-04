@@ -1,6 +1,6 @@
 import { matches_summary } from "./matches.js";
 
-const won_toss_won_match = async () => {
+export const won_toss_won_match = async () => {
     const summary = await matches_summary()
     const winner_tally = summary.reduce((acc, curr) => {
         if (curr.toss_winner === curr.winner) {
@@ -18,7 +18,7 @@ const won_toss_won_match = async () => {
         // }
         return acc
     }, {})
-    console.log(winner_tally)
+    return winner_tally
 
 }
 

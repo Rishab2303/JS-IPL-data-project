@@ -1,7 +1,7 @@
 import { matches_summary } from "./matches.js";
 import { deliveries_summary } from "./deliveries.js";
 
-const Economic_bowler = async () => {
+export const Economic_bowler = async () => {
     const summary = await matches_summary()
     const deliveries = await deliveries_summary()
 
@@ -48,7 +48,7 @@ const Economic_bowler = async () => {
     let _economy_sort = _economy.sort((a, b) => b[1] - a[1])
     let top_10_economy = _economy_sort.slice(0, 10)
 
-    console.log(top_10_economy)
+    return top_10_economy
     // bowlers_economy()
 
 }

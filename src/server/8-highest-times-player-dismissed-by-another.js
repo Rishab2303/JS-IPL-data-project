@@ -1,6 +1,6 @@
 import { deliveries_summary } from "./deliveries.js";
 
-const dismiss = async (dissmised_player, dismissed_by) => {
+export const dismiss = async (dissmised_player, dismissed_by) => {
     const deliveries = await deliveries_summary()
 
     const result = deliveries.reduce((i, delivery) => {

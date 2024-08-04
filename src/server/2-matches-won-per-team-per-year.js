@@ -1,6 +1,6 @@
 import { matches_summary } from "./matches.js";
 
-const won_matches = async () => {
+export const won_matches = async () => {
     // const years = await num_of_matches_played_every_year()
     const summary = await matches_summary();
 
@@ -27,7 +27,7 @@ const won_matches = async () => {
         return acc
     }, {});
 
-    console.log(result)
+    return result
 
 }
 won_matches();

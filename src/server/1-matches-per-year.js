@@ -14,9 +14,21 @@ export const num_of_matches_played_every_year = async () => {
         }
         return acc
     }, {})
-    console.log(count)
+    return (count)
 
 }
 
 
-num_of_matches_played_every_year()
+// const dataJson = async () => {
+//     let jsonString = await num_of_matches_played_every_year().then(problem1 => {
+//         JSON.stringify(problem1)
+//     })
+//     const blob = new Blob([jsonString], { type: "application/json" })
+//     const url = URL.createObjectURL(blob)
+//     console.log(url)
+
+// }
+
+// dataJson()
+
+

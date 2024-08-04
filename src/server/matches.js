@@ -33,7 +33,7 @@ export const matches_summary = () => {
 
             resolve(formattedData)
 
-            console.log(formattedData[0])
+            // console.log(formattedData[0])
 
 
         });

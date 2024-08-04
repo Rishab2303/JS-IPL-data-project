@@ -1,6 +1,6 @@
 import { matches_summary } from "./matches.js";
 
-const player_of_the_match_per_season = async () => {
+export const player_of_the_match_per_season = async () => {
     const summary = await matches_summary();
     const result = summary.reduce((acc, match) => {
         if (acc[match.season]) {
@@ -35,6 +35,6 @@ const player_of_the_match_per_season = async () => {
         }
         obj[year] = maxPlayer
     }
-    console.log(obj)
+    return obj
 }
 player_of_the_match_per_season()

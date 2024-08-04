@@ -1,6 +1,6 @@
 import { deliveries_summary } from "./deliveries.js";
 
-const best_economy_in_super_over = async () => {
+export const best_economy_in_super_over = async () => {
 
     const deliveries = await deliveries_summary()
 
@@ -49,7 +49,7 @@ const best_economy_in_super_over = async () => {
         return minKey;
 
     }
-    console.log(best_bowler())
+    return best_bowler()
 }
 
 best_economy_in_super_over()
